@@ -44,4 +44,19 @@ const fibsRec = (num) => {
     return fibsRec(num - 1) + fibsRec(num - 2)
 }
 
-console.log(fibsRec(10))
+console.log(fibsRec(5))
+
+/*
+[0,1,1,2,3,5]
+
+                                 fibsRec(5)
+                               /           \
+                      fibsRec(4)   +   fibsRec(3)
+                             /                \
+        fibsRec(3) + fibsRec(2)           fibsRec(2) + fibsRec(1)  
+            /             \                           \ 
+fibsRec(2) + fibsRec(1) | fibsRec(1) + fibsRec(0) | fibsRec(1) + fibsRec(0)
+    /
+fibsRec(1) + fibsRec(0)
+*/
+
