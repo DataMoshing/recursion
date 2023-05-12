@@ -1,5 +1,5 @@
 const merge = (leftArr, rightArr) => {
-    const arr = [] // mergSort leftArr = [5, 9, 62] // mergeSort righArr = [1, 1, 5]
+    const arr = [] // mergSort leftArr = [5, 9, 62] // mergeSort rightArr = [1, 1, 5]
 
     // While there is a left array and right array
     while (leftArr.length && rightArr.length) {
@@ -27,6 +27,10 @@ const mergeSort = (arr) => { // arr = [9, 5, 62, 5, 1, 1]
     let right = mergeSort(arr.slice(midPoint))
 
     return merge(left, right)
+    // leftArr = [5, 9, 62] 
+    // rightArr = [1, 1, 5]
+
+    // Outcome after merge call arr = [1, 1, 5, 5, 9, 62]
 }
 
 console.log(mergeSort([9, 5, 62, 5, 1, 1]))
